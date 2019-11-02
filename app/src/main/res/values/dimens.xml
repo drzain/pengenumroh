@@ -4,7 +4,8 @@
     <dimen name="newsMoreTextSize">12sp</dimen>
     <dimen name="loginCardRadius">10dp</dimen>
     <dimen name="loginViewsMargin">20dp</dimen>
-
+    <dimen name="banner_height">160dp</dimen>
+    <dimen name="_2sdp">2dp</dimen>
     <dimen name="signup_text_margin_top">10dp</dimen>
 
 </resources>

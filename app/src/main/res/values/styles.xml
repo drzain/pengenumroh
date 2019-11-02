@@ -13,6 +13,10 @@
         <item name="android:statusBarColor">@color/colorUmroh</item>
     </style>
 
+    <style name="customRatingBar"
+        parent="android:style/Widget.Material.RatingBar.Small">
+    </style>
+
     <style name="AppTheme.Transparent" parent="AppTheme">
         <item name="windowActionBarOverlay">true</item>
         <item name="android:statusBarColor">@color/colorAccent</item>
