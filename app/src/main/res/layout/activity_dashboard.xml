@@ -1,6 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:id="@+id/root_layout"
+    android:focusableInTouchMode="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
@@ -18,13 +20,22 @@
         android:orientation="horizontal"
         android:layout_marginRight="10dp">
 
-        <SearchView
+        <!--<SearchView
             android:layout_weight="1"
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false">
-        </SearchView>
+        </SearchView>-->
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:editable="false"
+            android:drawableLeft="@drawable/kacapembesar"
+            android:layout_height="match_parent"/>
 
         <ImageView
             android:layout_width="100dp"
@@ -183,6 +194,7 @@
             android:layout_marginBottom="70dp">
 
             <android.support.v7.widget.CardView
+                android:id="@+id/promoumrohcard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="3dp"

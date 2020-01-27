@@ -7,7 +7,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.viewpagerindicator.CirclePageIndicator;
@@ -19,6 +23,9 @@ import java.util.TimerTask;
 public class DashboardActivity extends AppCompatActivity {
 
     private static ViewPager mPager;
+    CardView umroh;
+    EditText cari;
+    private View rootView;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private static final Integer[] IMAGES= {R.drawable.slide1,R.drawable.slide2,R.drawable.slide3};
@@ -29,9 +36,26 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         getWindow().setBackgroundDrawableResource(R.drawable.background);
+        rootView = findViewById(R.id.root_layout);
 
         init();
+        cari = (EditText) findViewById(R.id.search);
+        cari.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                Intent i = new Intent(DashboardActivity.this,SearchActivity.class);
+                startActivity(i);
+            }
+        });
 
+        umroh = (CardView) findViewById(R.id.promoumrohcard);
+        umroh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashboardActivity.this,DetailPesananActivity.class);
+                startActivity(i);
+            }
+        });
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         // beri listener pada saat item/menu bottomnavigation terpilih
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
@@ -43,7 +67,8 @@ public class DashboardActivity extends AppCompatActivity {
 
                         break;
                     case R.id.action_favorites:
-                        Toast.makeText(DashboardActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
+                        Intent z = new Intent(DashboardActivity.this,FavoritActivity.class);
+                        startActivity(z);
                         break;
                     case R.id.action_order:
                         Intent x = new Intent(DashboardActivity.this,PesananActivity.class);
@@ -57,6 +82,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void init() {
         for(int i=0;i<IMAGES.length;i++)

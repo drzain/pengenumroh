@@ -1,0 +1,6 @@
+query UserDong($username: String!){
+    CheckUserName(username: $username){
+        UserName
+        PhoneNumber
+    }
+}

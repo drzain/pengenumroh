@@ -65,6 +65,9 @@
 
     <string name="title_activity_seting">SetingActivity</string>
 
+    <string name="judulspinner">Title</string>
+    <string name="kursiroda">Menggunakan Kursi Roda?</string>
+
     <string-array name="pref_example_list_titles">
         <item>Always</item>
         <item>When possible</item>
@@ -84,6 +87,16 @@
         <item>3 hours</item>
         <item>6 hours</item>
         <item>Never</item>
+    </string-array>
+
+    <string-array name="jk">
+        <item>Mr.</item>
+        <item>Ms.</item>
+    </string-array>
+
+    <string-array name="yatidak">
+        <item>Ya</item>
+        <item>Tidak</item>
     </string-array>
 
     <!-- Example settings for Notifications -->

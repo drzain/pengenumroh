@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PesananActivity"></activity>
+        <activity android:name=".Order2Activity"
+            android:parentActivityName=".OrderActivity" ></activity>
+        <activity
+            android:name=".OrderActivity"
+            android:parentActivityName=".DetailPesananActivity" />
+        <activity android:name=".FavoritActivity" />
+        <activity
+            android:name=".SearchActivity"
+            android:parentActivityName=".DashboardActivity" />
+        <activity android:name=".DetailPesananActivity" />
+        <activity android:name=".PesananActivity" />
         <activity android:name=".AkunActivity" />
         <activity
             android:name=".RegisterActivity"

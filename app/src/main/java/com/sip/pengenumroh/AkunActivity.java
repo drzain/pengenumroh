@@ -29,7 +29,8 @@ public class AkunActivity extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.action_favorites:
-                        Toast.makeText(AkunActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
+                        Intent z = new Intent(AkunActivity.this,FavoritActivity.class);
+                        startActivity(z);
                         break;
                     case R.id.action_order:
                         Intent x = new Intent(AkunActivity.this,PesananActivity.class);
